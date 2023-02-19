@@ -1,3 +1,5 @@
+// import confetti from '../js/confetti.js'
+
 //* Constants:
 
 const winningCombos: number[][] = [
@@ -115,6 +117,7 @@ function checkForWinner(): void {
       board[winningCombos[i][2]]
     ) === 3) {
       winner = true
+      confetti.start(1500)
     }
   }
 }

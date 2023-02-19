@@ -1,4 +1,5 @@
 "use strict";
+// import confetti from '../js/confetti.js'
 //* Constants:
 const winningCombos = [
     [0, 1, 2],
@@ -94,6 +95,7 @@ function checkForWinner() {
             board[winningCombos[i][1]] +
             board[winningCombos[i][2]]) === 3) {
             winner = true;
+            confetti.start(1500);
         }
     }
 }
